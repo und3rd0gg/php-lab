@@ -1,0 +1,212 @@
+﻿:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --active-button-color: #1a6fa1;
+}
+
+body {
+    font-family: 'Roboto Light', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.tab-link-active {
+    border-bottom: 2px solid white;
+}
+
+.tab-content-disabled {
+    display: none;
+}
+
+.tab-content-active {
+    display: block;
+}
+
+#main-content {
+    padding: 20px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#auth-buttons {
+    margin-left: auto;
+}
+
+button:hover {
+    background-color: var(--active-button-color);
+}
+
+#home img,
+#news img,
+#info img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Стили для главной вкладки */
+#home {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Стили для вкладки Новости */
+#news {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Стили для вкладки О клинике */
+#info {
+    background-color: #e8e8e8;
+    padding: 20px;
+}
+
+/* Стили для кнопок регистрации и авторизации */
+#auth-buttons button {
+    margin-right: 10px;
+}
+
+/* Добавлены стили для формы регистрации */
+#register {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registration-form label {
+    margin-top: 10px;
+}
+
+#registration-form input,
+#registration-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+#registration-form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#registration-form button:hover {
+    background-color: var(--active-button-color);
+}
+
+/* Стили для формы авторизации */
+#login {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-form label {
+    margin-top: 10px;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#login-form button:hover {
+    background-color: var(--active-button-color);
+}
+
+/* Стили для формы записи на прием */
+#appointment {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+#appointment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#appointment-form label {
+    margin-top: 10px;
+}
+
+#appointment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+#appointment-form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#appointment-form button:hover {
+    background-color: var(--active-button-color);
+}
