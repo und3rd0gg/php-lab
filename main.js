@@ -1,5 +1,4 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-    // Получаем ссылки на элементы вкладок и их содержимое
     const homeTab = document.getElementById('home-tab');
     const newsTab = document.getElementById('news-tab');
     const infoTab = document.getElementById('info-tab');
@@ -10,13 +9,11 @@
     const infoContent = document.getElementById('info');
     const appointmentContent = document.getElementById('appointment');
 
-    // Функция для отображения выбранной вкладки
     function showTab(tab, content) {
         tab.classList.add('tab-link-active');
         content.classList.remove('tab-content-disabled');
     }
 
-    // Обработчики событий для каждой вкладки
     homeTab.addEventListener('click', function (event) {
         event.preventDefault();
         hideAllTabs();
@@ -41,10 +38,8 @@
         showTab(appointmentTab, appointmentContent);
     });
 
-    // По умолчанию показываем первую вкладку
     showTab(homeTab, homeContent);
 
-    // Получаем ссылку на кнопку регистрации и вкладку регистрации
     const registerBtn = document.getElementById('register-btn');
     const registerTab = document.getElementById('register');
 
@@ -90,16 +85,4 @@
         loginTab.classList.remove('tab-link-active'); // Добавлено удаление подчеркивания у вкладки авторизации
         appointmentTab.classList.remove('tab-link-active');
     }
-
-    // Обработчик события для вкладки записи на прием
-    appointmentTab.addEventListener('click', function (event) {
-        event.preventDefault();
-
-        // Скрываем все вкладки
-        hideAllTabs();
-
-        // Показываем вкладку записи на прием
-        appointmentContent.classList.remove('tab-content-disabled');
-        appointmentContent.classList.add('tab-link-active');
-    });
 });
