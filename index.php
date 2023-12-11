@@ -60,7 +60,7 @@
     <!-- Вкладка Регистрация -->
     <div id="register" class="tab-content-disabled">
         <h2>Регистрация</h2>
-        <form id="registration-form">
+        <form action="registration.php" method="POST" id="registration-form">
             <label for="user-type">Группа пользователя:</label>
             <select id="user-type" name="user-type">
                 <option value="client">Клиент</option>
@@ -76,6 +76,9 @@
 
             <label for="last-name">Фамилия:</label>
             <input type="text" id="last-name" name="last-name" required>
+
+            <label for="phone-number">Номер телефона:</label>
+            <input type="text" id="phone-number" name="phone-number" required>
 
             <label for="birthdate">Дата рождения:</label>
             <input type="date" id="birthdate" name="birthdate" required>
