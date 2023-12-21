@@ -29,7 +29,7 @@
     <div id="home" class="tab-content-disabled tab-link-active">
         <h2>Добро пожаловать в нашу стоматологическую клинику!</h2>
         <p>Заботимся о вашем улыбке с профессионализмом и заботой.</p>
-        <img src="dental-care-image.jpg" alt="Дентальный уход">
+        <img src="dental-care-image.jpg">
     </div>
 
     <!-- Вкладка Новости -->
@@ -92,7 +92,7 @@
 
     <div id="login" class="tab-content-disabled">
         <h2>Авторизация</h2>
-        <form id="login-form">
+        <form action="login.php" method="POST" id="login-form">
             <label for="login-email">Электронная почта:</label>
             <input type="email" id="login-email" name="login-email" required>
 
