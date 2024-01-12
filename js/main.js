@@ -2,12 +2,16 @@
     const homeTab = document.getElementById('home-tab');
     const newsTab = document.getElementById('news-tab');
     const infoTab = document.getElementById('info-tab');
+    const servicesTab = document.getElementById('services-tab');
     const appointmentTab = document.getElementById('appointment-tab');
+    const cartBtn = document.getElementById('cart-btn');
 
     const homeContent = document.getElementById('home');
     const newsContent = document.getElementById('news');
     const infoContent = document.getElementById('info');
+    const servicesContent = document.getElementById('services');
     const appointmentContent = document.getElementById('appointment');
+    const cartTab = document.getElementById('cart');
 
     function showTab(tab, content) {
         tab.classList.add('tab-link-active');
@@ -38,51 +42,54 @@
         showTab(appointmentTab, appointmentContent);
     });
 
-    showTab(homeTab, homeContent);
-
-    const registerBtn = document.getElementById('register-btn');
-    const registerTab = document.getElementById('register');
-
-    // Обработчик события для кнопки регистрации
-    registerBtn.addEventListener('click', function (event) {
+    servicesTab.addEventListener('click', function (event) {
         event.preventDefault();
-
-        // Скрываем все вкладки
         hideAllTabs();
-
-        // Показываем вкладку регистрации
-        registerTab.classList.remove('tab-content-disabled');
-        registerTab.classList.add('tab-link-active');
+        showTab(servicesTab, servicesContent);
     });
 
-    const loginBtn = document.getElementById('login-btn');
-    const loginTab = document.getElementById('login');
-    
-    // Обработчик события для кнопки авторизации
-    loginBtn.addEventListener('click', function (event) {
+    cartBtn.addEventListener('click', function (event) {
         event.preventDefault();
-
-        // Скрываем все вкладки
         hideAllTabs();
-
-        // Показываем вкладку авторизации
-        loginTab.classList.remove('tab-content-disabled');
-        loginTab.classList.add('tab-link-active');
+        showTab(cartBtn, cartTab);
     });
 
     function hideAllTabs() {
         homeContent.classList.add('tab-content-disabled');
         newsContent.classList.add('tab-content-disabled');
         infoContent.classList.add('tab-content-disabled');
-        registerTab.classList.add('tab-content-disabled'); // Добавлено скрытие вкладки регистрации
-        loginTab.classList.add('tab-content-disabled'); // Добавлено скрытие вкладки авторизации
         appointmentContent.classList.add('tab-content-disabled');
+        servicesContent.classList.add('tab-content-disabled');
+        cartTab.classList.add('tab-content-disabled');
 
         homeTab.classList.remove('tab-link-active');
         newsTab.classList.remove('tab-link-active');
         infoTab.classList.remove('tab-link-active');
-        registerTab.classList.remove('tab-link-active'); // Добавлено удаление подчеркивания у вкладки регистрации
-        loginTab.classList.remove('tab-link-active'); // Добавлено удаление подчеркивания у вкладки авторизации
         appointmentTab.classList.remove('tab-link-active');
+        servicesTab.classList.remove('tab-link-active');
+        cartBtn.classList.remove('tab-link-active');
+    }
+
+    // Функция для открытия корзины
+    function openCart() {
+        hideAllTabs();
+        showTab(cartBtn, cartTab);
+    }
+
+    // Функция для оформления заказа
+    function checkout() {
+        // Дополнительная логика для оформления заказа
+        alert('Заказ успешно оформлен!');
+        // Очищаем корзину после оформления заказа
+        const cartItemsContainer = document.getElementById('cart-items');
+        cartItemsContainer.innerHTML = '';
+    }
+
+    // Функция для добавления товара в корзину
+    function addToCart(itemName, itemPrice) {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const newItem = document.createElement('p');
+        newItem.textContent = `${itemName}: $${itemPrice}`;
+        cartItemsContainer.appendChild(newItem);
     }
 });

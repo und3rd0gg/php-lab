@@ -71,9 +71,10 @@ button:hover {
 #home img,
 #news img,
 #info img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 /* Стили для главной вкладки */
@@ -208,5 +209,40 @@ button:hover {
 }
 
 #appointment-form button:hover {
+    background-color: var(--active-button-color);
+}
+
+.service-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: none;
+}
+
+#cart {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+#cart-items {
+    margin-top: 10px;
+}
+
+#cart-items p {
+    margin: 5px 0;
+}
+
+#checkout-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#checkout-btn:hover {
     background-color: var(--active-button-color);
 }
